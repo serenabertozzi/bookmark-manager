@@ -6,8 +6,13 @@ class BookmarkManager < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get "/" do
+  get '/' do
     erb :index
+  end
+
+  get '/bookmarks' do
+    @bookmarks = ["Website1", "Website2", "Website3"]
+    erb :'bookmarks/index'
   end
 
   run! if app_file == $0
