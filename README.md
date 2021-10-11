@@ -5,8 +5,8 @@ I'd like to see a list of sites I have bookmarked.
 ```
 
 
-![User story 1](user_story_1.drawio)
 
+![Installation](user_story_1.drawio.svg)
 
 
 The website will have the following specification:
