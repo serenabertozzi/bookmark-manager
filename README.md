@@ -5,7 +5,7 @@ I'd like to see a list of sites I have bookmarked.
 ```
 
 
-![User story 1](user_story_1.drawio.svg)
+![User story 1](user_story_1.drawio)
 
 
 
