@@ -9,6 +9,14 @@ I'd like to see a list of sites I have bookmarked.
 ![Installation](user_story_1.drawio.svg)
 
 
+## Setting up the database
+- psql postgres
+- CREATE DATABASE bookmark_manager;
+- \c bookmark_manager;
+- inside db/migrations, enter the query
+- \q to exit postgresql
+
+
 The website will have the following specification:
 
 Show a list of bookmarks
