@@ -1,6 +1,9 @@
 class Bookmark
-
   def self.all
-    @bookmarks
+    [
+      "Website1",
+      "Website2",
+      "Website3",
+    ]
   end
 end
