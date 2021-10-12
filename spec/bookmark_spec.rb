@@ -3,9 +3,15 @@ require "bookmark"
 describe Bookmark do
   describe "#all" do
     it "returns all bookmarks" do
-      expect(Bookmark.all).to include("Website1")
-      expect(Bookmark.all).to include("Website2")
-      expect(Bookmark.all).to include("Website3")
+      connection = PG.connect(dbname: "bookmark_manager_test")
+
+      connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com/');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com/');")
+
+      expect(Bookmark.all).to include("http://www.makersacademy.com/")
+      expect(Bookmark.all).to include("http://www.destroyallsoftware.com")
+      expect(Bookmark.all).to include("http://www.google.com/")
     end
   end
 end

@@ -5,11 +5,8 @@ ruby "3.0.0"
 gem "sinatra"
 gem "sinatra-contrib"
 gem "capybara"
-gem "thin"
-gem "puma"
-gem "reel"
-gem "http"
 gem "webrick"
+gem "pg"
 #gem 'launchy'
 
 group :development, :test do

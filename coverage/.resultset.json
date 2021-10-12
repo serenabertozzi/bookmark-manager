@@ -9,21 +9,14 @@
           1,
           1,
           1,
-          1,
-          1,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/serenabertozzi/Makers/week-4/bookmark-manager/lib/bookmark.rb": {
-        "lines": [
+          1,
           1,
           1,
           null,
-          4,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -32,12 +25,20 @@
       "/Users/serenabertozzi/Makers/week-4/bookmark-manager/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           1,
+          null,
+          1,
           1,
           1,
           1,
           null,
           null,
           1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
           1,
           1,
           1,
@@ -46,6 +47,6 @@
         ]
       }
     },
-    "timestamp": 1633965028
+    "timestamp": 1634056731
   }
 }
