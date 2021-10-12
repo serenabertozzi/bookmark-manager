@@ -19,6 +19,29 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/serenabertozzi/Makers/week-4/bookmark-manager/spec/features/adding_a_bookmark_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
           null
         ]
       },
@@ -34,8 +57,6 @@
           null,
           1,
           1,
-          null,
-          1,
           1,
           1,
           null,
@@ -47,6 +68,6 @@
         ]
       }
     },
-    "timestamp": 1634056731
+    "timestamp": 1634060920
   }
 }

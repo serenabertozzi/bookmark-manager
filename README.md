@@ -4,6 +4,11 @@
 As a user,
 So that I can remember the sites I want to go back to,
 I'd like to see a list of sites I have bookmarked.
+
+As a user
+So that I can increase the list of bookmarks,
+I'd like to add new bookmarks.
+
 ```
 ### Domain Modeling
 
