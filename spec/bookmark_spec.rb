@@ -41,4 +41,35 @@ describe Bookmark do
       expect(Bookmark.all.length).to eq 0
     end
   end
+
+  describe ".find" do
+    it "finds a bookmark" do
+      #test data
+      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
+      wrong_one = Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Destroy All Software")
+      Bookmark.create(url: "http://www.google.com/", title: "Google")
+
+      result = Bookmark.find(id: bookmark.id)
+
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq 'Makers Academy'
+      expect(result.url).to eq 'http://www.makersacademy.com'
+      expect(result.id).to_not eq wrong_one.id
+    end
+  end
+
+  describe ".update" do
+    it "updates a bookmark" do
+      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
+      wrong_one = Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Destroy All Software")
+      Bookmark.create(url: "http://www.google.com/", title: "Google")
+
+      updated = Bookmark.update(id: bookmark.id, title: "Makers", url: "http://www.makers.tech")
+
+      expect(updated.id).to eq bookmark.id
+      expect(updated.title).to eq 'Makers'
+      expect(updated.url).to eq 'http://www.makers.tech'
+      expect(updated.id).to_not eq wrong_one.id
+    end
+  end
 end
