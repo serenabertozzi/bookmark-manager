@@ -1,11 +1,11 @@
 require "bookmark"
 require "database_helpers"
+require "./lib/database_connection_setup"
 
 describe Bookmark do
   describe ".all" do
     it "returns all bookmarks" do
-      connection = PG.connect(dbname: "bookmark_manager_test")
-
+      DatabaseConnection.setup("bookmark_manager_test")
       #test data
       bookmark = Bookmark.create(url: "http://www.makersacademy.com/", title: "Makers Academy")
       Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Destroy All Software")
@@ -52,8 +52,8 @@ describe Bookmark do
       result = Bookmark.find(id: bookmark.id)
 
       expect(result.id).to eq bookmark.id
-      expect(result.title).to eq 'Makers Academy'
-      expect(result.url).to eq 'http://www.makersacademy.com'
+      expect(result.title).to eq "Makers Academy"
+      expect(result.url).to eq "http://www.makersacademy.com"
       expect(result.id).to_not eq wrong_one.id
     end
   end
@@ -67,8 +67,8 @@ describe Bookmark do
       updated = Bookmark.update(id: bookmark.id, title: "Makers", url: "http://www.makers.tech")
 
       expect(updated.id).to eq bookmark.id
-      expect(updated.title).to eq 'Makers'
-      expect(updated.url).to eq 'http://www.makers.tech'
+      expect(updated.title).to eq "Makers"
+      expect(updated.url).to eq "http://www.makers.tech"
       expect(updated.id).to_not eq wrong_one.id
     end
   end

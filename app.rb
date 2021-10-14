@@ -1,6 +1,8 @@
 require "sinatra/base"
 require "sinatra/reloader"
 require_relative "./lib/bookmark"
+require_relative "./lib/database_connection"
+require "./lib/database_connection_setup"
 
 class BookmarkManager < Sinatra::Base
   enable :session, :method_override
@@ -31,14 +33,14 @@ class BookmarkManager < Sinatra::Base
     redirect "/bookmarks"
   end
 
-  get'/bookmarks/:id/edit' do
+  get "/bookmarks/:id/edit" do
     @bookmark = Bookmark.find(id: params[:id])
     erb :'bookmarks/edit'
   end
 
-  patch '/bookmarks/:id/edit' do
+  patch "/bookmarks/:id/edit" do
     Bookmark.update(id: params[:id], url: params[:url], title: params[:title])
-    redirect '/bookmarks'
+    redirect "/bookmarks"
   end
 
   run! if app_file == $0
